@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,26 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for our typing tutor
+				typing: {
+					background: '#194662',
+					text: '#d1d5db',
+					highlight: '#000000',
+					orange: '#f97316',
+					blue: '#3b82f6',
+					lightblue: '#93c5fd',
+					green: '#10b981',
+					correct: '#10b981',
+					incorrect: '#ef4444',
+					hand: '#e2e8f0',
+					finger: {
+						pinky: '#9b87f5',
+						ring: '#3b82f6',
+						middle: '#10b981',
+						index: '#f97316',
+						thumb: '#d1d5db'
+					}
 				}
 			},
 			borderRadius: {
@@ -84,11 +105,20 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-finger': {
+					'0%, 100%': {
+						opacity: '1',
+					},
+					'50%': {
+						opacity: '0.7',
+					},
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-finger': 'pulse-finger 1.5s ease-in-out infinite',
 			}
 		}
 	},
